@@ -46,9 +46,25 @@ button {
 }
 
 .container {
-  width: 1200px;
-  margin: 0 auto;
   padding: 0 15px;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 .social-list {
@@ -102,99 +118,108 @@ button {
 .header .container {
   display: flex;
   align-items: center;
-  height: 80px;
-  justify-content: space-between;
-}
-
-.header {
-  border-bottom: 1px solid #ececec;
-}
-
-.header-tel-link, .header-email-link {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.143;
-  letter-spacing: 0.02em;
-  color: #757575;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  fill: #757575;
-}
-
-.navigation .nav {
-  display: flex;
-  align-items: center;
-  height: 80px;
-}
-
-.address .address-nav {
-  display: flex;
-  align-items: center;
+  height: 60px;
 }
 
 .nav-list:first-child {
-  margin-right: 93px;
+  margin-right: 15px;
 }
 
-.nav-list:nth-child(1n + 2) {
-  margin-right: 50px;
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .header {
+    border-bottom: 1px solid #ececec;
+  }
+  .header-tel-link, .header-email-link {
+    display: none;
+  }
+  .header .nav-list-link {
+    display: none;
+  }
 }
 
-.nav-list-link {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.143;
-  letter-spacing: 0.02em;
-  color: #212121;
-  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.nav-list .current {
-  color: #2196f3;
-  display: block;
-  position: relative;
-}
-
-.adress-list:not(:last-child) {
-  margin-right: 50px;
-}
-
-.studio-underline::after {
-  content: "";
-  position: absolute;
-  background-color: #2196f3;
-  display: block;
-  border-radius: 2px;
-  width: 48px;
-  height: 4px;
-  margin-top: 29px;
-}
-
-.portfolio-underline::after {
-  content: "";
-  position: absolute;
-  background-color: #2196f3;
-  display: block;
-  border-radius: 2px;
-  width: 76px;
-  height: 4px;
-  margin-top: 29px;
-}
-
-.address-svg {
-  margin-right: 10px;
-}
-
-.nav-list-link:hover,
-.nav-list-link:focus,
-.header-tel-link:hover,
-.header-tel-link:focus,
-.header-email-link:focus,
-.header-email-link:hover {
-  color: #2196f3;
-  fill: #2196f3;
+@media screen and (min-width: 768px) {
+  .header .container {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    justify-content: space-between;
+  }
+  .header {
+    border-bottom: 1px solid #ececec;
+  }
+  .header-tel-link, .header-email-link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.143;
+    letter-spacing: 0.02em;
+    color: #757575;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    fill: #757575;
+  }
+  .navigation .nav {
+    display: flex;
+    align-items: center;
+  }
+  .address .address-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav-list:first-child {
+    margin-right: 93px;
+  }
+  .nav-list:nth-child(1n + 2) {
+    margin-right: 50px;
+  }
+  .nav-list-link {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.143;
+    letter-spacing: 0.02em;
+    color: #212121;
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .nav-list .current {
+    color: #2196f3;
+    display: block;
+    position: relative;
+  }
+  .studio-underline::after {
+    content: "";
+    position: absolute;
+    background-color: #2196f3;
+    display: block;
+    border-radius: 2px;
+    width: 48px;
+    height: 4px;
+    margin-top: 29px;
+  }
+  .portfolio-underline::after {
+    content: "";
+    position: absolute;
+    background-color: #2196f3;
+    display: block;
+    border-radius: 2px;
+    width: 76px;
+    height: 4px;
+    margin-top: 29px;
+  }
+  .address-svg {
+    margin-right: 10px;
+  }
+  .nav-list-link:hover,
+  .nav-list-link:focus,
+  .header-tel-link:hover,
+  .header-tel-link:focus,
+  .header-email-link:focus,
+  .header-email-link:hover {
+    color: #2196f3;
+    fill: #2196f3;
+  }
 }
 
 .footer {

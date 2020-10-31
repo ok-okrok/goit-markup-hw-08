@@ -1,9 +1,8 @@
 .main-section {
-  height: 600px;
-  max-width: 1600px;
+  height: 400px;
   text-align: center;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
@@ -16,17 +15,22 @@
   margin: 0 auto;
   background-color: #c4c4c4;
 
-  &-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+    &-title {
     font-family: $main-font;
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+    font-size: 26px;
+    line-height: 1.62;
     letter-spacing: 0.06em;
     color: #ffffff;
     padding-bottom: 30px;
+    text-transform: uppercase;
   }
 
-  &-button {
+    &-button {
     display: inline-block;
     height: 50px;
     padding: 0 32px;
