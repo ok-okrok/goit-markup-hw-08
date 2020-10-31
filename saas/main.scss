@@ -1,0 +1,26 @@
+//utils
+
+@import "./utils/variables";
+@import "./utils/visualy-hidden";
+
+//base
+
+@import "./base/common";
+@import "./base/container";
+
+//components
+
+@import "./components/social-link";
+@import "./components/logo";
+@import "./components/modal-form";
+
+//layout
+
+@import "./layout/benefits";
+@import "./layout/customers";
+@import "./layout/doing-team";
+@import "./layout/header";
+@import "./layout/main-section";
+@import "./layout/footer";
+// @import "./layout/prtf-project";
+// @import "./layout/prtf-btn";

@@ -1,0 +1,93 @@
+.portfolio-project .container {
+  height: 1548px;
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.portfolio-project-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.portfolio-project-list {
+  height: 404px;
+  width: 370px;
+  border: 1px solid rgba(238, 238, 238, 1);
+
+  &:not(:nth-child(3n + 3)) {
+    margin-right: 30px;
+  }
+
+  &:not(:nth-last-child(-n + 3)) {
+    margin-bottom: 30px;
+  }
+
+  &:hover,
+  &:focus {
+    border: 1px solid #eeeeee;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+    transition: all 250ms $animation-change-item;
+  }
+}
+
+.project-photo {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-block {
+  width: 370px;
+  height: 110px;
+  padding: 20px 24px 20px;
+}
+
+.portfolio-project-title {
+  font-family: $main-font;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: $title-theme-color;
+}
+
+.portfolio-project-type {
+  font-family: $main-font;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.03em;
+  color: $text-theme-color;
+}
+
+.portfolio-project-hover {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 63px 24px 63px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(100%);
+  transition: all 250ms $animation-change-item;
+
+  .portfolio-project-list:hover &,
+  .portfolio-project-list:focus & {
+    transform: translateY(0);
+  }
+}
+
+.project-text {
+  font-family: $main-font;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  color: #ffffff;
+  letter-spacing: 0.02em;
+}

@@ -1,0 +1,45 @@
+.customers .container {
+  height: 370px;
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.customer-title {
+  font-family: $main-font;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $title-theme-color;
+  padding-bottom: 50px;
+}
+
+.customer-list {
+  display: flex;
+  justify-content: space-between;
+
+  &-link {
+    display: flex;
+  }
+}
+
+.customer-link {
+  display: flex;
+  width: 170px;
+  height: 90px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(175, 177, 184, 1);
+  border-radius: 4px;
+  transition: all 250ms $animation-change-item;
+  transform: scale(1);
+  fill: rgba(175, 177, 184, 1);
+
+  &:hover,
+  &:focus {
+    border: 1px solid $animation-theme-color;
+    fill: $animation-theme-color;
+    transform: scale(1.2);
+  }
+}
