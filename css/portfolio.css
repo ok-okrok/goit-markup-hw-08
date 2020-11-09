@@ -429,9 +429,16 @@ button {
   background-color: #2196f3;
   display: block;
   border-radius: 2px;
-  width: 66px;
   height: 4px;
   margin-top: 29px;
+}
+
+.studio-underline-menu::after {
+  width: 66px;
+}
+
+.studio-underline::after {
+  width: 48px;
 }
 
 .portfolio-underline::after,

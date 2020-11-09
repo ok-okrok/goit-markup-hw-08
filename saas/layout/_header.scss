@@ -69,10 +69,16 @@
     background-color: $animation-theme-color;
     display: block;
     border-radius: 2px;
-    // width: 48px;
-    width: 66px;
     height: 4px;
     margin-top: 29px;
+  }
+
+  .studio-underline-menu::after {
+    width: 66px;
+  }
+
+  .studio-underline::after {
+    width: 48px;
   }
 
   .portfolio-underline::after,
