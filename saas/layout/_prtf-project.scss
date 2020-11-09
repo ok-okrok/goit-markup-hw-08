@@ -1,7 +1,5 @@
 .portfolio-project .container {
-  height: 1548px;
-  padding-top: 94px;
-  padding-bottom: 94px;
+  height: auto;
 }
 
 .portfolio-project-group {
@@ -11,17 +9,7 @@
 }
 
 .portfolio-project-list {
-  height: 404px;
-  width: 370px;
   border: 1px solid rgba(238, 238, 238, 1);
-
-  &:not(:nth-child(3n + 3)) {
-    margin-right: 30px;
-  }
-
-  &:not(:nth-last-child(-n + 3)) {
-    margin-bottom: 30px;
-  }
 
   &:hover,
   &:focus {
@@ -39,8 +27,8 @@
 }
 
 .portfolio-block {
-  width: 370px;
-  height: 110px;
+  // width: 370px;
+  // height: 110px;
   padding: 20px 24px 20px;
 }
 
@@ -90,4 +78,114 @@
   line-height: 1.56;
   color: #ffffff;
   letter-spacing: 0.02em;
+}
+
+
+@media screen and (max-width: 767px) {
+  .portfolio-project .container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  
+  .portfolio-project-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 40px;
+    margin: -15px;
+  }
+  
+  .portfolio-project-list {
+    // height: 450px;
+    // width: 404px;
+    margin: 15px;
+  }
+  
+  .project-photo {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .portfolio-block {
+    width: 370px;
+    height: 110px;
+    padding: 20px 24px 20px;
+  }
+  
+  .portfolio-project-hover {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 63px 24px 63px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .portfolio-project .container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  
+  .portfolio-project-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 40px;
+    margin: -15px;
+  }
+
+  .portfolio-project-list {
+    width: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio-project .container {
+    height: auto;
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+  
+  .portfolio-project-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 50px;
+  }
+  
+  .portfolio-project-list {
+    height: 404px;
+    width: calc((100% - 6 * 15px) / 3);
+  
+    &:not(:nth-child(3n + 3)) {
+      margin-right: 30px;
+    }
+  
+    &:not(:nth-last-child(-n + 3)) {
+      margin-bottom: 30px;
+    }
+  }
+  
+  .project-photo {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .portfolio-block {
+    width: 370px;
+    height: 110px;
+    padding: 20px 24px 20px;
+  }
+  
+  .portfolio-project-hover {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 63px 24px 63px;
+  }
 }

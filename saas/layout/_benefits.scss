@@ -89,6 +89,10 @@
     justify-content: center;
   }
 
+  .benefits-list {
+    width: 100%;
+  }
+
   .benefits-list-item {
     text-align: center;
   }
@@ -113,7 +117,7 @@
 
   .benefits-list {
     height: 251px;
-    max-width: 354px;
+    width: calc((100% - 4 * 15px) / 2);
 
     &:nth-child(2n + 1) {
       margin-right: 30px;

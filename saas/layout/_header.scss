@@ -15,7 +15,9 @@
   border-bottom: 1px solid rgba(236, 236, 236, 1);
 
   &-tel-link,
-  &-email-link {
+  &-email-link,
+  &-tel-link-menu,
+  &-email-link-menu {
     font-weight: 500;
     font-size: 12px;
     line-height: 1.143;
@@ -43,24 +45,38 @@
     transition: all 250ms $animation-change-item;
   }
 
-  .nav-list .current {
+  .nav-list-link-menu {
+    font-family: $main-font;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    color: $title-theme-color;
+    // transition: all 250ms $animation-change-item;
+  }
+
+  .nav-list .current,
+  .nav-list-menu .current {
     color: $animation-theme-color;
     display: block;
     position: relative;
   }
 
-  .studio-underline::after {
+  .studio-underline::after,
+  .studio-underline-menu::after {
     content: "";
     position: absolute;
     background-color: $animation-theme-color;
     display: block;
     border-radius: 2px;
-    width: 48px;
+    // width: 48px;
+    width: 66px;
     height: 4px;
     margin-top: 29px;
   }
 
-  .portfolio-underline::after {
+  .portfolio-underline::after,
+  .portfolio-underline-menu::after {
     content: "";
     position: absolute;
     background-color: $animation-theme-color;
@@ -80,7 +96,13 @@
   .header-tel-link:hover,
   .header-tel-link:focus,
   .header-email-link:focus,
-  .header-email-link:hover {
+  .header-email-link:hover,
+  .nav-list-link-menu:hover,
+  .nav-list-link-menu:focus,
+  .header-tel-link-menu:hover,
+  .header-tel-link-menu:focus,
+  .header-email-link-menu:focus,
+  .header-email-link-menu:hover {
     color: $animation-theme-color;
     fill: $animation-theme-color;
   }
@@ -98,6 +120,71 @@
       display: none;
     }
   }
+
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    padding-top: 0px;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    background-color: white;
+    visibility: visible;
+    transition: all 250ms linear;
+    overflow-y: auto;
+
+    padding: 60px 0 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    &.is-hidden {
+      visibility: hidden;
+      pointer-events: none;
+      transition: all 250ms linear;
+    }
+
+    .nav-list-menu {
+      margin-bottom: 40px;
+    }
+
+    .nav-list-link-menu {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .adress-list-menu {
+      margin-bottom: 16px;
+    }
+
+    .kost {
+      margin-top: 60px;
+    }
+  }
+
+  .nav-button {
+    display: inline-flex;
+    border: none;
+    background-color: transparent;
+    transition: $animation-change-item;
+    &:hover,
+    &:focus {
+      fill: $animation-theme-color;
+    }
+  }
+  
+  .nav-button .icon-cross {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -113,9 +200,14 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
+  .nav-menu {
+    display: none;
+  }
+
   .adress-list:not(:last-child) {
     margin-bottom: 10px;
   }
+
   .address .address-nav {
     display: flex;
     flex-direction: column;
@@ -131,9 +223,17 @@
   header-email-link {
     font-size: 12px;
   }
+
+  .nav-button {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 1200px) {
+  .nav-menu {
+    display: none;
+  }
+
   &-tel-link,
   &-email-link {
     font-weight: 500;
@@ -158,6 +258,14 @@
 
   .adress-list:not(:last-child) {
     margin-right: 50px;
+  }
+
+  .header .container {
+    justify-content: space-between;
+  }
+
+  .nav-button {
+    display: none;
   }
 }
 

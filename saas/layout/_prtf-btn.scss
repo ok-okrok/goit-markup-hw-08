@@ -23,10 +23,39 @@
 
 .portfolio-group {
   display: flex;
-  justify-content: center;
-  margin-bottom: 44px;
 }
 
 .portfolio-list-button:not(:last-child) {
   margin-right: 8px;
 }
+
+
+@media screen and (max-width: 767px) {
+  .portfolio-list-button {
+    margin-bottom: 15px;
+  }
+  
+  .portfolio-group {
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    margin-bottom: -15px;
+  }
+  
+  .portfolio-list-button:not(:last-child) {
+    margin-right: 8px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .portfolio-group {
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio-group {
+    justify-content: center;
+  }
+}
+
+
