@@ -23,6 +23,7 @@
 
 .portfolio-group {
   display: flex;
+  max-width: 100%;
 }
 
 .portfolio-list-button:not(:last-child) {
@@ -33,6 +34,7 @@
 @media screen and (max-width: 767px) {
   .portfolio-list-button {
     margin-bottom: 15px;
+    max-width: 100%;
   }
   
   .portfolio-group {

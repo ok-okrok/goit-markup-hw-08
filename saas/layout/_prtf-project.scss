@@ -6,10 +6,12 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  max-width: 100%;
 }
 
 .portfolio-project-list {
   border: 1px solid rgba(238, 238, 238, 1);
+  max-width: 100%;
 
   &:hover,
   &:focus {
@@ -30,6 +32,7 @@
   // width: 370px;
   // height: 110px;
   padding: 20px 24px 20px;
+  max-width: 100%;
 }
 
 .portfolio-project-title {
@@ -58,6 +61,8 @@
   align-items: center;
   justify-content: center;
   padding: 63px 24px 63px;
+
+  overflow: auto;
 
   position: absolute;
   top: 0;
@@ -107,9 +112,10 @@
   }
   
   .portfolio-block {
-    width: 370px;
-    height: 110px;
+    // width: 370px;
+    // height: 110px;
     padding: 20px 24px 20px;
+    height: 100%;
   }
   
   .portfolio-project-hover {
